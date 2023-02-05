@@ -5,11 +5,9 @@ x = [x0 for _ in range(n+1)]
 for i in range(1, n+1):
     x[i] = ((a * x[i-1] + c) % m)
 
-# x = x[1:]
-
 cnt = 0
 for num in range(1, n+1):
-    lo, hi = 0, n-1
+    lo, hi = 1, n
     while lo <= hi:
         mid = (lo + hi) // 2
         if x[mid] == x[num]:
